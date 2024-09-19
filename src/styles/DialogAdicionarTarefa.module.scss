@@ -1,0 +1,92 @@
+.modalOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.03);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+	backdrop-filter: blur(3px);
+}
+
+.modalContent {
+	background: white;
+	padding: 1.5rem;
+	border-radius: 0.375rem;
+	width: 90%;
+	max-width: 400px;
+
+	box-shadow: 0 24px 48px -12px rgba(16, 24, 34, 0.18);
+
+	h2 {
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+		color: #000;
+		font-weight: 500;
+		text-align: left;
+	}
+
+	label {
+		margin-bottom: 1rem;
+		font-size: 1rem;
+		color: #000;
+		text-align: left;
+	}
+
+	p {
+		margin-bottom: 1.5rem;
+		color: rgba(0, 0, 0, 0.55);
+		text-align: left;
+	}
+
+	.input {
+		width: 100%;
+		padding: 0.6rem;
+		border: 1px solid #dcdcdc;
+		border-radius: 0.375rem;
+		margin-bottom: 1rem;
+		font-size: 1rem;
+		outline: none;
+	}
+
+	.modalActions {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 1rem;
+		gap: 1rem;
+
+		.cancelar-button {
+			padding: 0.5rem 1rem;
+			border: none;
+			border-radius: 0.275rem;
+			cursor: pointer;
+			transition: background 0.3s ease;
+			width: 185px;
+			background: #e7eefb;
+
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+		.adicionar-button {
+			padding: 0.5rem 1rem;
+			border: none;
+			border-radius: 0.275rem;
+			color: white;
+			cursor: pointer;
+			transition: background 0.3s ease;
+			width: 185px;
+			background: linear-gradient(90deg, #0796d3, #53c0f0);
+			&:hover {
+				background: linear-gradient(
+					90deg,
+					darken(#0796d3, 10%),
+					darken(#53c0f0, 10%)
+				);
+			}
+		}
+	}
+}
